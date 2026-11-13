@@ -1,0 +1,842 @@
+[
+  {
+    "name": "baseline",
+    "schemaVersion": 2,
+    "product": "Park Trace",
+    "exportedAt": "2026-11-07T06:06:55.224Z",
+    "source": "simulation",
+    "world": {
+      "width": 320,
+      "height": 330,
+      "floorHeight": 3.2,
+      "undergroundFloors": 3,
+      "version": 2
+    },
+    "ramps": [
+      {
+        "id": "R1",
+        "from": 0,
+        "to": 1,
+        "start": {
+          "x": 24,
+          "y": 300
+        },
+        "end": {
+          "x": 24,
+          "y": 260
+        },
+        "width": 14
+      },
+      {
+        "id": "R2",
+        "from": 1,
+        "to": 2,
+        "start": {
+          "x": 280,
+          "y": 70
+        },
+        "end": {
+          "x": 280,
+          "y": 110
+        },
+        "width": 14
+      },
+      {
+        "id": "R3",
+        "from": 2,
+        "to": 3,
+        "start": {
+          "x": 24,
+          "y": 210
+        },
+        "end": {
+          "x": 24,
+          "y": 170
+        },
+        "width": 14
+      }
+    ],
+    "finalActualLevel": 3,
+    "seed": 42,
+    "physicsHz": 120,
+    "sensorHz": 20,
+    "config": {
+      "vehicle": {
+        "id": "compact",
+        "name": "컴팩트 EV",
+        "massKg": 1650,
+        "wheelbaseM": 2.7,
+        "lengthM": 4.3,
+        "widthM": 1.8,
+        "steeringRatio": 15,
+        "maxDriveForceN": 6500,
+        "maxBrakeForceN": 15000,
+        "dragAreaM2": 0.65,
+        "rollingCoefficient": 0.012
+      },
+      "friction": 0.85,
+      "speedBiasPct": 0.6,
+      "steeringBiasDeg": 0.5,
+      "noise": 0.35,
+      "gpsMode": "auto",
+      "scenario": "garage"
+    },
+    "durationSeconds": 394.45,
+    "actualDistanceM": 1634.5186047176492,
+    "distanceM": 1644.3318841918463,
+    "horizontalRmseM": 27.826190732047237,
+    "maxHorizontalErrorM": 53.421888208239395,
+    "collisions": 0,
+    "parkingEstimate": {
+      "x": 200.04653492706308,
+      "y": 285.69605958588494,
+      "heading": 0.3880163009062928,
+      "z": -9.723563650996327,
+      "speed": 0,
+      "distance": 1644.3318841918463,
+      "gradeRad": 0.000243784729945961,
+      "gradeObservable": false,
+      "uncertaintyM": 23.692426252341402,
+      "gpsUsed": false
+    },
+    "limits": [
+      "합성 데이터의 성능은 실차 검증 결과가 아닙니다.",
+      "층 추정에는 보정된 힘 모델과 층고 3.2m를 가정합니다.",
+      "불확실성 반경은 경험적 지표이며 통계적 신뢰구간이 아닙니다.",
+      "외부 데이터에는 정답 좌표가 없어 위치 오차를 산출하지 않습니다.",
+      "기록은 최근 18,000개 샘플까지 보관합니다."
+    ],
+    "events": [
+      {
+        "time": 0,
+        "text": "시작 위치·층 기준점 설정 · 합성 센서 준비",
+        "kind": "info"
+      },
+      {
+        "time": 4.258333333333333,
+        "text": "R1 슬로프 진입 · 높이 변화 중",
+        "kind": "info"
+      },
+      {
+        "time": 4.3,
+        "text": "GPS 수신 중단 · 차량 센서로 경로 기록",
+        "kind": "warning"
+      },
+      {
+        "time": 10.65,
+        "text": "B1 이동 추정 · 층고 3.2m 가정",
+        "kind": "info"
+      },
+      {
+        "time": 13.825,
+        "text": "B1 도착 · 물리 모델 층 전환",
+        "kind": "success"
+      },
+      {
+        "time": 139.8,
+        "text": "R2 슬로프 진입 · 높이 변화 중",
+        "kind": "info"
+      },
+      {
+        "time": 146.15,
+        "text": "B2 이동 추정 · 층고 3.2m 가정",
+        "kind": "info"
+      },
+      {
+        "time": 149.35833333333332,
+        "text": "B2 도착 · 물리 모델 층 전환",
+        "kind": "success"
+      },
+      {
+        "time": 277.71666666666664,
+        "text": "R3 슬로프 진입 · 높이 변화 중",
+        "kind": "info"
+      },
+      {
+        "time": 284,
+        "text": "B3 이동 추정 · 층고 3.2m 가정",
+        "kind": "info"
+      },
+      {
+        "time": 287.2833333333333,
+        "text": "B3 도착 · 물리 모델 층 전환",
+        "kind": "success"
+      },
+      {
+        "time": 394.45,
+        "text": "P 기어 + 2초 정차 · 주차 위치 기록",
+        "kind": "success"
+      },
+      {
+        "time": 394.45,
+        "text": "자동 시연 완료 · 실험 결과를 내보낼 수 있습니다",
+        "kind": "success"
+      }
+    ],
+    "finalHorizontalErrorM": 53.421888208239395,
+    "actualElevationM": -9.600000000000001,
+    "estimatedElevationM": -9.723563650996327,
+    "complete": true
+  },
+  {
+    "name": "gps-on",
+    "schemaVersion": 2,
+    "product": "Park Trace",
+    "exportedAt": "2026-11-07T06:06:55.289Z",
+    "source": "simulation",
+    "world": {
+      "width": 320,
+      "height": 330,
+      "floorHeight": 3.2,
+      "undergroundFloors": 3,
+      "version": 2
+    },
+    "ramps": [
+      {
+        "id": "R1",
+        "from": 0,
+        "to": 1,
+        "start": {
+          "x": 24,
+          "y": 300
+        },
+        "end": {
+          "x": 24,
+          "y": 260
+        },
+        "width": 14
+      },
+      {
+        "id": "R2",
+        "from": 1,
+        "to": 2,
+        "start": {
+          "x": 280,
+          "y": 70
+        },
+        "end": {
+          "x": 280,
+          "y": 110
+        },
+        "width": 14
+      },
+      {
+        "id": "R3",
+        "from": 2,
+        "to": 3,
+        "start": {
+          "x": 24,
+          "y": 210
+        },
+        "end": {
+          "x": 24,
+          "y": 170
+        },
+        "width": 14
+      }
+    ],
+    "finalActualLevel": 3,
+    "seed": 42,
+    "physicsHz": 120,
+    "sensorHz": 20,
+    "config": {
+      "vehicle": {
+        "id": "compact",
+        "name": "컴팩트 EV",
+        "massKg": 1650,
+        "wheelbaseM": 2.7,
+        "lengthM": 4.3,
+        "widthM": 1.8,
+        "steeringRatio": 15,
+        "maxDriveForceN": 6500,
+        "maxBrakeForceN": 15000,
+        "dragAreaM2": 0.65,
+        "rollingCoefficient": 0.012
+      },
+      "friction": 0.85,
+      "speedBiasPct": 0.6,
+      "steeringBiasDeg": 0.5,
+      "noise": 0.35,
+      "gpsMode": "on",
+      "scenario": "garage"
+    },
+    "durationSeconds": 394.45,
+    "actualDistanceM": 1634.5186047176492,
+    "distanceM": 1644.3192107028142,
+    "horizontalRmseM": 0.0321009372679092,
+    "maxHorizontalErrorM": 0.08229672941871935,
+    "collisions": 0,
+    "parkingEstimate": {
+      "x": 239.79226593165913,
+      "y": 249.98472071399428,
+      "heading": 0.00012177887312395154,
+      "z": -9.720036622748625,
+      "speed": 0,
+      "distance": 1644.3192107028142,
+      "gradeRad": 0.00033216624079048196,
+      "gradeObservable": false,
+      "uncertaintyM": 0.5016074493715169,
+      "gpsUsed": true
+    },
+    "limits": [
+      "합성 데이터의 성능은 실차 검증 결과가 아닙니다.",
+      "층 추정에는 보정된 힘 모델과 층고 3.2m를 가정합니다.",
+      "불확실성 반경은 경험적 지표이며 통계적 신뢰구간이 아닙니다.",
+      "외부 데이터에는 정답 좌표가 없어 위치 오차를 산출하지 않습니다.",
+      "기록은 최근 18,000개 샘플까지 보관합니다."
+    ],
+    "events": [
+      {
+        "time": 0,
+        "text": "시작 위치·층 기준점 설정 · 합성 센서 준비",
+        "kind": "info"
+      },
+      {
+        "time": 4.258333333333333,
+        "text": "R1 슬로프 진입 · 높이 변화 중",
+        "kind": "info"
+      },
+      {
+        "time": 10.65,
+        "text": "B1 이동 추정 · 층고 3.2m 가정",
+        "kind": "info"
+      },
+      {
+        "time": 13.825,
+        "text": "B1 도착 · 물리 모델 층 전환",
+        "kind": "success"
+      },
+      {
+        "time": 139.8,
+        "text": "R2 슬로프 진입 · 높이 변화 중",
+        "kind": "info"
+      },
+      {
+        "time": 146.15,
+        "text": "B2 이동 추정 · 층고 3.2m 가정",
+        "kind": "info"
+      },
+      {
+        "time": 149.35833333333332,
+        "text": "B2 도착 · 물리 모델 층 전환",
+        "kind": "success"
+      },
+      {
+        "time": 277.71666666666664,
+        "text": "R3 슬로프 진입 · 높이 변화 중",
+        "kind": "info"
+      },
+      {
+        "time": 283.95,
+        "text": "B3 이동 추정 · 층고 3.2m 가정",
+        "kind": "info"
+      },
+      {
+        "time": 287.2833333333333,
+        "text": "B3 도착 · 물리 모델 층 전환",
+        "kind": "success"
+      },
+      {
+        "time": 394.45,
+        "text": "P 기어 + 2초 정차 · 주차 위치 기록",
+        "kind": "success"
+      },
+      {
+        "time": 394.45,
+        "text": "자동 시연 완료 · 실험 결과를 내보낼 수 있습니다",
+        "kind": "success"
+      }
+    ],
+    "finalHorizontalErrorM": 0.01531620102885006,
+    "actualElevationM": -9.600000000000001,
+    "estimatedElevationM": -9.720036622748625,
+    "complete": true
+  },
+  {
+    "name": "high-bias",
+    "schemaVersion": 2,
+    "product": "Park Trace",
+    "exportedAt": "2026-11-07T06:06:55.352Z",
+    "source": "simulation",
+    "world": {
+      "width": 320,
+      "height": 330,
+      "floorHeight": 3.2,
+      "undergroundFloors": 3,
+      "version": 2
+    },
+    "ramps": [
+      {
+        "id": "R1",
+        "from": 0,
+        "to": 1,
+        "start": {
+          "x": 24,
+          "y": 300
+        },
+        "end": {
+          "x": 24,
+          "y": 260
+        },
+        "width": 14
+      },
+      {
+        "id": "R2",
+        "from": 1,
+        "to": 2,
+        "start": {
+          "x": 280,
+          "y": 70
+        },
+        "end": {
+          "x": 280,
+          "y": 110
+        },
+        "width": 14
+      },
+      {
+        "id": "R3",
+        "from": 2,
+        "to": 3,
+        "start": {
+          "x": 24,
+          "y": 210
+        },
+        "end": {
+          "x": 24,
+          "y": 170
+        },
+        "width": 14
+      }
+    ],
+    "finalActualLevel": 3,
+    "seed": 42,
+    "physicsHz": 120,
+    "sensorHz": 20,
+    "config": {
+      "vehicle": {
+        "id": "compact",
+        "name": "컴팩트 EV",
+        "massKg": 1650,
+        "wheelbaseM": 2.7,
+        "lengthM": 4.3,
+        "widthM": 1.8,
+        "steeringRatio": 15,
+        "maxDriveForceN": 6500,
+        "maxBrakeForceN": 15000,
+        "dragAreaM2": 0.65,
+        "rollingCoefficient": 0.012
+      },
+      "friction": 0.85,
+      "speedBiasPct": 3,
+      "steeringBiasDeg": 4,
+      "noise": 0.35,
+      "gpsMode": "off",
+      "scenario": "garage"
+    },
+    "durationSeconds": 394.45,
+    "actualDistanceM": 1634.5186047176492,
+    "distanceM": 1683.5870902433057,
+    "horizontalRmseM": 164.6414777760017,
+    "maxHorizontalErrorM": 294.36701710346455,
+    "collisions": 0,
+    "parkingEstimate": {
+      "x": -7.839905442592079,
+      "y": 90.84462336683637,
+      "heading": 3.138259564079129,
+      "z": -9.998502590059651,
+      "speed": 0,
+      "distance": 1683.5870902433057,
+      "gradeRad": 0.0011834569644577444,
+      "gradeObservable": false,
+      "uncertaintyM": 24.61359141651692,
+      "gpsUsed": false
+    },
+    "limits": [
+      "합성 데이터의 성능은 실차 검증 결과가 아닙니다.",
+      "층 추정에는 보정된 힘 모델과 층고 3.2m를 가정합니다.",
+      "불확실성 반경은 경험적 지표이며 통계적 신뢰구간이 아닙니다.",
+      "외부 데이터에는 정답 좌표가 없어 위치 오차를 산출하지 않습니다.",
+      "기록은 최근 18,000개 샘플까지 보관합니다."
+    ],
+    "events": [
+      {
+        "time": 0,
+        "text": "시작 위치·층 기준점 설정 · 합성 센서 준비",
+        "kind": "info"
+      },
+      {
+        "time": 0.05,
+        "text": "GPS 수신 중단 · 차량 센서로 경로 기록",
+        "kind": "warning"
+      },
+      {
+        "time": 4.258333333333333,
+        "text": "R1 슬로프 진입 · 높이 변화 중",
+        "kind": "info"
+      },
+      {
+        "time": 10.45,
+        "text": "B1 이동 추정 · 층고 3.2m 가정",
+        "kind": "info"
+      },
+      {
+        "time": 13.825,
+        "text": "B1 도착 · 물리 모델 층 전환",
+        "kind": "success"
+      },
+      {
+        "time": 139.8,
+        "text": "R2 슬로프 진입 · 높이 변화 중",
+        "kind": "info"
+      },
+      {
+        "time": 145.65,
+        "text": "B2 이동 추정 · 층고 3.2m 가정",
+        "kind": "info"
+      },
+      {
+        "time": 149.35833333333332,
+        "text": "B2 도착 · 물리 모델 층 전환",
+        "kind": "success"
+      },
+      {
+        "time": 277.71666666666664,
+        "text": "R3 슬로프 진입 · 높이 변화 중",
+        "kind": "info"
+      },
+      {
+        "time": 283.25,
+        "text": "B3 이동 추정 · 층고 3.2m 가정",
+        "kind": "info"
+      },
+      {
+        "time": 287.2833333333333,
+        "text": "B3 도착 · 물리 모델 층 전환",
+        "kind": "success"
+      },
+      {
+        "time": 394.45,
+        "text": "P 기어 + 2초 정차 · 주차 위치 기록",
+        "kind": "success"
+      },
+      {
+        "time": 394.45,
+        "text": "자동 시연 완료 · 실험 결과를 내보낼 수 있습니다",
+        "kind": "success"
+      }
+    ],
+    "finalHorizontalErrorM": 294.36701710346455,
+    "actualElevationM": -9.600000000000001,
+    "estimatedElevationM": -9.998502590059651,
+    "complete": true
+  },
+  {
+    "name": "uphill",
+    "schemaVersion": 2,
+    "product": "Park Trace",
+    "exportedAt": "2026-11-07T06:06:55.437Z",
+    "source": "simulation",
+    "world": {
+      "width": 320,
+      "height": 330,
+      "floorHeight": 3.2,
+      "undergroundFloors": 3,
+      "version": 2
+    },
+    "ramps": [
+      {
+        "id": "R1",
+        "from": 0,
+        "to": 1,
+        "start": {
+          "x": 24,
+          "y": 300
+        },
+        "end": {
+          "x": 24,
+          "y": 260
+        },
+        "width": 14
+      },
+      {
+        "id": "R2",
+        "from": 1,
+        "to": 2,
+        "start": {
+          "x": 280,
+          "y": 70
+        },
+        "end": {
+          "x": 280,
+          "y": 110
+        },
+        "width": 14
+      },
+      {
+        "id": "R3",
+        "from": 2,
+        "to": 3,
+        "start": {
+          "x": 24,
+          "y": 210
+        },
+        "end": {
+          "x": 24,
+          "y": 170
+        },
+        "width": 14
+      }
+    ],
+    "finalActualLevel": 0,
+    "seed": 42,
+    "physicsHz": 120,
+    "sensorHz": 20,
+    "config": {
+      "vehicle": {
+        "id": "compact",
+        "name": "컴팩트 EV",
+        "massKg": 1650,
+        "wheelbaseM": 2.7,
+        "lengthM": 4.3,
+        "widthM": 1.8,
+        "steeringRatio": 15,
+        "maxDriveForceN": 6500,
+        "maxBrakeForceN": 15000,
+        "dragAreaM2": 0.65,
+        "rollingCoefficient": 0.012
+      },
+      "friction": 0.85,
+      "speedBiasPct": 0.6,
+      "steeringBiasDeg": 0.5,
+      "noise": 0.35,
+      "gpsMode": "auto",
+      "scenario": "uphill"
+    },
+    "durationSeconds": 394.45,
+    "actualDistanceM": 1634.5176778435946,
+    "distanceM": 1644.3571240261706,
+    "horizontalRmseM": 29.60786250632536,
+    "maxHorizontalErrorM": 54.22795771934478,
+    "collisions": 0,
+    "parkingEstimate": {
+      "x": 24.020264094987354,
+      "y": 313.8003054886602,
+      "heading": 1.5709022966579833,
+      "z": -0.07433796228458488,
+      "speed": 0,
+      "distance": 1644.3571240261706,
+      "gradeRad": 0.002897063939171892,
+      "gradeObservable": false,
+      "uncertaintyM": 0.5021963030635967,
+      "gpsUsed": true
+    },
+    "limits": [
+      "합성 데이터의 성능은 실차 검증 결과가 아닙니다.",
+      "층 추정에는 보정된 힘 모델과 층고 3.2m를 가정합니다.",
+      "불확실성 반경은 경험적 지표이며 통계적 신뢰구간이 아닙니다.",
+      "외부 데이터에는 정답 좌표가 없어 위치 오차를 산출하지 않습니다.",
+      "기록은 최근 18,000개 샘플까지 보관합니다."
+    ],
+    "events": [
+      {
+        "time": 0,
+        "text": "시작 위치·층 기준점 설정 · 합성 센서 준비",
+        "kind": "info"
+      },
+      {
+        "time": 104.05833333333334,
+        "text": "R3 슬로프 진입 · 높이 변화 중",
+        "kind": "info"
+      },
+      {
+        "time": 110.6,
+        "text": "B2 이동 추정 · 층고 3.2m 가정",
+        "kind": "info"
+      },
+      {
+        "time": 113.625,
+        "text": "B2 도착 · 물리 모델 층 전환",
+        "kind": "success"
+      },
+      {
+        "time": 241.975,
+        "text": "R2 슬로프 진입 · 높이 변화 중",
+        "kind": "info"
+      },
+      {
+        "time": 248.5,
+        "text": "B1 이동 추정 · 층고 3.2m 가정",
+        "kind": "info"
+      },
+      {
+        "time": 251.54166666666666,
+        "text": "B1 도착 · 물리 모델 층 전환",
+        "kind": "success"
+      },
+      {
+        "time": 377.51666666666665,
+        "text": "R1 슬로프 진입 · 높이 변화 중",
+        "kind": "info"
+      },
+      {
+        "time": 383.95,
+        "text": "1F 이동 추정 · 층고 3.2m 가정",
+        "kind": "info"
+      },
+      {
+        "time": 387.075,
+        "text": "1F 도착 · 물리 모델 층 전환",
+        "kind": "success"
+      },
+      {
+        "time": 387.1,
+        "text": "GPS 재수신 · 위치 보정 시작",
+        "kind": "success"
+      },
+      {
+        "time": 394.45,
+        "text": "P 기어 + 2초 정차 · 주차 위치 기록",
+        "kind": "success"
+      },
+      {
+        "time": 394.45,
+        "text": "자동 시연 완료 · 실험 결과를 내보낼 수 있습니다",
+        "kind": "success"
+      }
+    ],
+    "finalHorizontalErrorM": 0.021891119617802123,
+    "actualElevationM": 0,
+    "estimatedElevationM": -0.07433796228458488,
+    "complete": true
+  },
+  {
+    "name": "flat",
+    "schemaVersion": 2,
+    "product": "Park Trace",
+    "exportedAt": "2026-11-07T06:06:55.476Z",
+    "source": "simulation",
+    "world": {
+      "width": 320,
+      "height": 330,
+      "floorHeight": 3.2,
+      "undergroundFloors": 3,
+      "version": 2
+    },
+    "ramps": [
+      {
+        "id": "R1",
+        "from": 0,
+        "to": 1,
+        "start": {
+          "x": 24,
+          "y": 300
+        },
+        "end": {
+          "x": 24,
+          "y": 260
+        },
+        "width": 14
+      },
+      {
+        "id": "R2",
+        "from": 1,
+        "to": 2,
+        "start": {
+          "x": 280,
+          "y": 70
+        },
+        "end": {
+          "x": 280,
+          "y": 110
+        },
+        "width": 14
+      },
+      {
+        "id": "R3",
+        "from": 2,
+        "to": 3,
+        "start": {
+          "x": 24,
+          "y": 210
+        },
+        "end": {
+          "x": 24,
+          "y": 170
+        },
+        "width": 14
+      }
+    ],
+    "finalActualLevel": 1,
+    "seed": 42,
+    "physicsHz": 120,
+    "sensorHz": 20,
+    "config": {
+      "vehicle": {
+        "id": "compact",
+        "name": "컴팩트 EV",
+        "massKg": 1650,
+        "wheelbaseM": 2.7,
+        "lengthM": 4.3,
+        "widthM": 1.8,
+        "steeringRatio": 15,
+        "maxDriveForceN": 6500,
+        "maxBrakeForceN": 15000,
+        "dragAreaM2": 0.65,
+        "rollingCoefficient": 0.012
+      },
+      "friction": 0.85,
+      "speedBiasPct": 0.6,
+      "steeringBiasDeg": 0.5,
+      "noise": 0.35,
+      "gpsMode": "auto",
+      "scenario": "flat"
+    },
+    "durationSeconds": 133.05,
+    "actualDistanceM": 537.2780306086992,
+    "distanceM": 540.5173130981668,
+    "horizontalRmseM": 4.189626792269794,
+    "maxHorizontalErrorM": 7.028237682684488,
+    "collisions": 0,
+    "parkingEstimate": {
+      "x": 240.93278764110232,
+      "y": 251.80607419597166,
+      "heading": 0.07941422017028826,
+      "z": -3.214460419579306,
+      "speed": 0,
+      "distance": 540.5173130981668,
+      "gradeRad": 0.0004671397939837298,
+      "gradeObservable": false,
+      "uncertaintyM": 8.340697319378581,
+      "gpsUsed": false
+    },
+    "limits": [
+      "합성 데이터의 성능은 실차 검증 결과가 아닙니다.",
+      "층 추정에는 보정된 힘 모델과 층고 3.2m를 가정합니다.",
+      "불확실성 반경은 경험적 지표이며 통계적 신뢰구간이 아닙니다.",
+      "외부 데이터에는 정답 좌표가 없어 위치 오차를 산출하지 않습니다.",
+      "기록은 최근 18,000개 샘플까지 보관합니다."
+    ],
+    "events": [
+      {
+        "time": 0,
+        "text": "시작 위치·층 기준점 설정 · 합성 센서 준비",
+        "kind": "info"
+      },
+      {
+        "time": 133.05,
+        "text": "P 기어 + 2초 정차 · 주차 위치 기록",
+        "kind": "success"
+      },
+      {
+        "time": 133.05,
+        "text": "자동 시연 완료 · 실험 결과를 내보낼 수 있습니다",
+        "kind": "success"
+      }
+    ],
+    "finalHorizontalErrorM": 2.1363519334003085,
+    "actualElevationM": -3.2,
+    "estimatedElevationM": -3.214460419579306,
+    "complete": true
+  }
+]

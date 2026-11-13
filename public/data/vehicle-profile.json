@@ -1,0 +1,13 @@
+{
+  "id": "compact",
+  "name": "컴팩트 EV",
+  "massKg": 1650,
+  "wheelbaseM": 2.7,
+  "lengthM": 4.3,
+  "widthM": 1.8,
+  "steeringRatio": 15,
+  "maxDriveForceN": 6500,
+  "maxBrakeForceN": 15000,
+  "dragAreaM2": 0.65,
+  "rollingCoefficient": 0.012
+}
